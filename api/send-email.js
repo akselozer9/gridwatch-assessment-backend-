@@ -20,6 +20,7 @@ module.exports = (req, res) => {
   }
 
   if (req.method === 'POST') {
+    console.log('POST request received:', req.body);
     const { pdfData } = req.body;
 
     const mailOptions = {
@@ -38,6 +39,7 @@ module.exports = (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
+        console.error('Error sending email:', error);
         return res.status(500).send(error.toString());
       }
       res.status(200).send('Email sent: ' + info.response);
