@@ -14,12 +14,37 @@ module.exports = (req, res) => {
     }
   
     if (req.url === '/api/v1/login' && req.method === 'POST') {
-      // Simple user database
+    
       const users = [
         {
-          email: 'aksel@umich.edu',
-          password: 'yoyoyy',
-          id: '1' // You would have hashed passwords in a real application
+          email: 'aksel@gridwatchems.com',
+          password: 'adminbrain',
+          id: '1' ,
+          ORG: 'Gridwatchems'
+        },
+        {
+          email: 'sam@gridwatchems.com',
+          password: 'adminbrain',
+          id: '2',
+          ORG: 'Gridwatchems'
+        },
+        {
+          email: 'matt.hendrickson@gridwatchems.com',
+          password: 'adminbrain',
+          id: '3' ,
+          ORG: 'Gridwatchems'
+        },
+        {
+          email: 'farhdine@gridwatchems.com',
+          password: 'adminbrain',
+          id: '4',
+          ORG: 'Gridwatchems'
+        },
+        {
+          email: 'romain@gridwatchems.com',
+          password: 'adminbrain',
+          id: '5',
+          ORG: 'Gridwatchems'
         },
       ];
       
