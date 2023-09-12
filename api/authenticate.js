@@ -1,5 +1,5 @@
 
-import {jwt} from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 
 module.exports = (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
