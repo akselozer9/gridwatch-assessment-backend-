@@ -2,14 +2,15 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/send-email.js",
+        "src": "api/authenticate.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/api/send-email.js"
+        "dest": "/api/authenticate.js",
+        "methods": ["POST"]
       }
     ]
   }
