@@ -13,7 +13,8 @@ module.exports = (req, res) => {
       const users = [
         {
           email: 'aksel@umich.edu',
-          password: 'yoyoyy', // You would have hashed passwords in a real application
+          password: 'yoyoyy',
+          id: '1' // You would have hashed passwords in a real application
         },
       ];
       
@@ -22,7 +23,12 @@ module.exports = (req, res) => {
       const user = users.find((user) => user.email === email && user.password === password);
   
       if (user) {
-        res.status(200).send({ token: 'your_generated_token_here' });
+        const jwtToken = jwt.sign(
+          {id: user.id, email: user.username },
+          'b51255d1d1ba41d0d751fe3e11609d26ae6d4459ba8a415e3a67ada63a67e57d'
+          )
+
+        res.status(200).send({ message: "Welcome Back!", token: jwtToken });
       } else {
         res.status(400).send({ message: 'Invalid email or password' });
       }
