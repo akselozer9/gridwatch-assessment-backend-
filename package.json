@@ -2,12 +2,12 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "api/send-email.js",
+  "main": "api/authenticate.js",
   "engines": {
     "node": "18.x"
   },
   "scripts": {
-    "start": "node api/send-email.js",
+    "start": "node api/authenticate.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
