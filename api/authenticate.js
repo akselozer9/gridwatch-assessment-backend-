@@ -59,7 +59,7 @@ module.exports = (req, res) => {
         )
         console.log(jwtToken);
       
-        res.status(200).send({ message: "Welcome Back!", token: jwtToken });
+        res.status(200).send({ message: "Welcome Back!", token: jwtToken, ORG: user.ORG });
       } else {
         res.status(400).send({ message: 'Invalid email or password' });
       }
