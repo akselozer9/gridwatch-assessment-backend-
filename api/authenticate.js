@@ -1,3 +1,6 @@
+
+import {jwt} from 'jsonwebtoken';
+
 module.exports = (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -27,6 +30,7 @@ module.exports = (req, res) => {
           {id: user.id, email: user.username },
           'b51255d1d1ba41d0d751fe3e11609d26ae6d4459ba8a415e3a67ada63a67e57d'
           )
+          console.log(jwtToken);
 
         res.status(200).send({ message: "Welcome Back!", token: jwtToken });
       } else {
